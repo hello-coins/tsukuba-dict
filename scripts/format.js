@@ -25,6 +25,6 @@ const sorted = parsed
         return new Intl.Collator('ja-JP').compare(aSortKey, bSortKey);
     });
 
-const sortedCsvFile = csv.stringify(sorted, { quote: false, header: true, columns: ['名称', 'よみがな', '説明', '補足'] });
+const sortedCsvFile = csv.stringify(sorted, { quoted: false, header: true, columns: ['名称', 'よみがな', '説明', '補足'] });
 
 writeFileSync(targetFile, sortedCsvFile, 'utf8');
