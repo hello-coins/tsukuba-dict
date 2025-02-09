@@ -18,11 +18,6 @@ const is0Alphabet = c => {
     );
 };
 
-// const withSortKey = new Map(parsed.map(s => [
-//     is0Alphabet(s.名称) ? s.名称.toLowerCase() : (s.よみがな + '_' + s.名称),
-//     s
-// ]));
-
 const sorted = parsed
     .toSorted((a, b) => {
         const aSortKey = is0Alphabet(a.名称) ? a.名称.toLowerCase() : a.よみがな;
