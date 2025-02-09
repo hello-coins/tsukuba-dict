@@ -18,6 +18,7 @@ slack,スラック,チャットや通話ができるチームコミュニケー�
 sアド,エスアド,2022年度までuアドとともに大学から配布されていたメールアドレス。s\d{7}@s.tsukuba.ac.jpの形式のアドレス,uアド
 Teams,チームス,Microsoftが提供するチャットツール。授業によっては使用されたり、coinsのクラ代や全代会や新歓委が採用している。なおこれを使うためのMicrosoft 365は微妙に使い勝手が悪いことで話題。,
 TWINS,ツインズ,筑波大学の教育情報システム。履修登録や成績確認などの際に使用する。,
+Twitter,ツイッター,現 自称X,"TsukubaのTはTwitterのT や ITF.はInstagram,Twitter,Facebookの略称などと言われている。"
 TX,ティーエックス,「つくばエクスプレス」の略称。つくばー秋葉原間を結ぶ鉄道路線で、多くの宅通民を支えている。守谷止まりの下り列車は「守谷エクスプレス」と呼ばれる。詳しくは第10章へ。,
 UNTIL.,アンティル,「UNiversity of Tsukuba Information-technology Lab.」の略称。筑波大学の学生やOBによって構成される情報系技術者コミュニティ。IPCによって運営されている。ときたまLT会を開いている。,https://until-tsukuba.github.io/
 uアド,ユーアド,大学から配布されるMicrosoftアカウントに紐づけられたメールアドレス。s\d{7}@u.tsukuba.ac.jpの形式のアドレス,sアド
