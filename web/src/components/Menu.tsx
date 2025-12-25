@@ -1,4 +1,4 @@
-import { IconBrandGithubFilled } from '@tabler/icons-react';
+import { IconBrandGithubFilled } from "@tabler/icons-react";
 
 export default function Menu() {
   return (
