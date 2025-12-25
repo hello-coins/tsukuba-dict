@@ -22,6 +22,8 @@ jobs:
         uses: cachix/install-nix-action@v31
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
+      - name: Move to `web` Directory
+        run: cd web
       - name: Test Verification
         run: nix develop --command bash -c "bun i && bun run test"
       - name: Build Test Verification
