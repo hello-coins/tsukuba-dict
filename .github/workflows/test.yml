@@ -25,6 +25,6 @@ jobs:
       - name: Move to `web` Directory
         run: cd web
       - name: Test Verification
-        run: nix develop --command bash -c "bun i && bun run test"
+        run: nix develop --command bash -c "bun install && bun run test"
       - name: Build Test Verification
-        run: nix develop --command bash -c "bun i && bun run build"
+        run: nix develop --command bash -c "bun install && bun run build"
