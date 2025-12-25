@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [react()],
   site: "https://hello-coins.github.io",
   base: "/tsukuba-dict/",
-  outDir: "docs",
+  outDir: "../docs",
   vite: {
     plugins: [tailwindcss()],
   },
