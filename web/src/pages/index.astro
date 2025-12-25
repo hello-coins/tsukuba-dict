@@ -1,0 +1,26 @@
+---
+import Idiom from "../components/Idiom";
+import Layout from "../layouts/Layout.astro";
+import idioms from "../data/idioms.json";
+---
+
+<Layout>
+  <div
+    class="columns-3
+      gap-2
+      h-screen
+      overflow-x-auto
+      overflow-y-hidden"
+    style={{
+      writingMode: "vertical-rl",
+    }}
+  >
+    {
+      idioms.map((idiom) => (
+        <div class="break-inside-avoid mb-6">
+          <Idiom {...idiom} />
+        </div>
+      ))
+    }
+  </div>
+</Layout>
