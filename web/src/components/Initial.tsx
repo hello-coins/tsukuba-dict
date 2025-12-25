@@ -18,8 +18,8 @@ export default function Initial({ text }: InitialData) {
         tracking-widest
       "
       style={{
-        writingMode: 'vertical-rl',
-        textOrientation: 'upright',
+        writingMode: "vertical-rl",
+        textOrientation: "upright",
       }}
     >
       {text}

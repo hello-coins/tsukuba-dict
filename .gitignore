@@ -1,5 +1,2 @@
 # Nix
 /.direnv
-
-# build output
-/docs

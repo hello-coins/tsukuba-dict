@@ -1,10 +1,9 @@
-name: Build and Deploy Astro
+name: Build and Deploy Astro (root docs)
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
   contents: write
@@ -12,22 +11,29 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: web
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
-      - name: Install Nix
-        uses: cachix/install-nix-action@v31
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          nix_path: nixpkgs=channel:nixpkgs-unstable
+          bun-version: latest
+
       - name: Load CSV
-        run: nix develop --command bash -c "bun install && bun load.ts"
-      - name: Test verification
-        run: nix develop --command bash -c "bun install && bun run test"
+        run: bun load.ts
+
+      - name: Install dependencies
+        run: bun install
+
       - name: Build Astro
-        run: nix develop --command bash -c "bun install && bun run build"
+        run: bun run build
+
       - name: Commit and push docs
         run: |
           git config user.name "github-actions[bot]"
