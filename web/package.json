@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "astro check",
-    "fmt": "npx prettier . --write",
+    "fmt": "bun x prettier . --write",
     "astro": "astro"
   },
   "dependencies": {

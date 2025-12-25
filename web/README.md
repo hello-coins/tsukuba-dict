@@ -28,17 +28,16 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command               | Action                                           |
-| :-------------------- | :----------------------------------------------- |
-| `bun install`         | Installs dependencies                            |
-| `bun load.ts`         | main.csv から単語一覧の Json を生成する              |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun run test`        | Run type checking using Astro `@astrojs/check`   |
-| `bun fmt`             | Format source code using Prettier                |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+| Command                   | Action                                         |
+| :------------------------ | :--------------------------------------------- |
+| `bun install`             | Installs dependencies                          |
+| `bun load.ts`             | main.csv から単語一覧の Json を生成する        |
+| `bun run dev`             | Starts local dev server at `localhost:4321`    |
+| `bun run build`           | Build your production site to `./dist/`        |
+| `bun run preview`         | Preview your build locally, before deploying   |
+| `bun run test`            | Run type checking using Astro `@astrojs/check` |
+| `bun run fmt`             | Format source code using Prettier              |
+| `bun run astro -- --help` | Get help using the Astro CLI                   |
 
 ## `web`の開発環境の構築方法
 
