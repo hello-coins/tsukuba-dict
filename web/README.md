@@ -37,3 +37,30 @@ All commands are run from the root of the project, from a terminal:
 | `bun preview`         | Preview your build locally, before deploying     |
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
+
+## `web`の開発環境の構築方法
+
+WEB 版の開発環境を構築するには、以下の手順を実行してください。
+
+- 非Nixユーザの場合
+
+1. `bun`をインストールします。
+
+2. `web`ディレクトリに移動します。
+
+3. 依存関係をインストールします。
+   ```sh
+   bun install
+   ```
+
+4. 開発サーバーを起動します。
+   ```sh
+   bun dev
+   ```
+
+- Nixユーザの場合
+
+flakeの`devShell`を利用して開発環境を構築します。
+
+また、`nix-direnv`を利用できるようにしておくと便利です。
+(`nix-ditenv`が導入されている前提で、環境を用意しています。)
