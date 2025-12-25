@@ -1,24 +1,31 @@
 ---
-import Idiom from "../components/Idiom";
+import Idiom, { type IdiomData } from "../components/Idiom";
 import Layout from "../layouts/Layout.astro";
 import idioms from "../data/idioms.json";
+import Menu from "../components/Menu";
+import Initial from "../components/Initial";
 ---
 
 <Layout>
+  <Menu />
+
+  {/* 単語の繰り返し部分 */}
   <div
-    class="columns-3
-      gap-2
-      h-screen
-      overflow-x-auto
-      overflow-y-hidden"
-    style={{
-      writingMode: "vertical-rl",
-    }}
+    class="columns-3 gap-2 h-screen w-full mt-3"
+    style={{ writingMode: "vertical-rl" }}
   >
     {
-      idioms.map((idiom) => (
-        <div class="break-inside-avoid mb-6">
-          <Idiom {...idiom} />
+      Object.entries(idioms).map(([initial, idioms]) => (
+        <div class="break-inside-avoid mb-8">
+          {/* 語頭見出し */}
+          <Initial text={initial} />
+
+          {/* 中身 */}
+          {idioms.map((idiom: IdiomData) => (
+            <div class="break-inside-avoid mb-6">
+              <Idiom {...idiom} />
+            </div>
+          ))}
         </div>
       ))
     }

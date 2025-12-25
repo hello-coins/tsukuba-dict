@@ -66,7 +66,7 @@ export default function Idiom({ name, reading, meaning, examples }: IdiomData) {
         className="text-sm text-stone-800 mb-3"
         style={{ lineHeight: "1.8" }}
       >
-        <span className="bg-black text-white px-1">解説</span>
+        <span className="bg-stone-600 text-white px-1 mb-0.5">解説</span>
         {renderWithLatin(meaning)}
       </div>
 
