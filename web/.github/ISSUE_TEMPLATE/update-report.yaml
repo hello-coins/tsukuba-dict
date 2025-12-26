@@ -1,0 +1,23 @@
+name: Update Request
+description: This template is a issue for requesting new updates.
+title: 'Update Request'
+
+body:
+  - type: markdown
+    id: body
+    attributes:
+      value: |
+        ## Update Request
+        Please provide a clear and concise description of the update you would like to add.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short summary of the update.
+      placeholder: A short summary of the update.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the update.
+      placeholder: A detailed description of the update.

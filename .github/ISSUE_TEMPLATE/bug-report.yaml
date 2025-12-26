@@ -1,0 +1,24 @@
+name: Bug Report
+description: This template is a issue for reporting bugs.
+title: 'Bug Report'
+
+body:
+  - type: markdown
+    id: body
+    attributes:
+      value: |
+        ## Bug Report
+
+        Please provide a clear and concise description of the bug you are experiencing.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short summary of the bug.
+      placeholder: A short summary of the bug.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the bug.
+      placeholder: A detailed description of the bug.

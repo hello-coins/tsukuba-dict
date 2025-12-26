@@ -32,9 +32,9 @@ All commands are run from the root of the project, from a terminal:
 | :-------------------- | :----------------------------------------------- |
 | `bun install`         | Installs dependencies                            |
 | `bun load.ts`         | main.csv から単語一覧の Json を生成する          |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
+| `bun run dev`             | Starts local dev server at `localhost:4321`      |
+| `bun run build`           | Build your production site to `./dist/`          |
+| `bun run preview`         | Preview your build locally, before deploying     |
 | `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun astro -- --help` | Get help using the Astro CLI                     |
 
@@ -49,11 +49,13 @@ WEB 版の開発環境を構築するには、以下の手順を実行してく�
 2. `web`ディレクトリに移動します。
 
 3. 依存関係をインストールします。
+
    ```sh
    bun install
    ```
 
 4. 開発サーバーを起動します。
+
    ```sh
    bun dev
    ```

@@ -1,0 +1,40 @@
+name: Test
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  pull_request:
+    branches:
+      - 'main'
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      # Checkout repository
+      - name: Checkout
+        uses: actions/checkout@v5
+      # Install Nix
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      # Load csv Data Verification
+      - name: Load csv Data Verification
+        run: nix develop --command bash -c "bun install && bun load.ts"
+      # Test Verification
+      - name: Test Verification
+        run: nix develop --command bash -c "bun install && bun run test"
+      # Build Test Verification
+      - name: Build Test Verification
+        run: nix develop --command bash -c "bun install && bun run build"

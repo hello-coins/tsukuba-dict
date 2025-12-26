@@ -1,0 +1,23 @@
+name: Chore Request
+description: This template is a issue for requesting new chores.
+title: 'Chore Request'
+
+body:
+  - type: markdown
+    id: body
+    attributes:
+      value: |
+        ## Chore Request
+        Please provide a clear and concise description of the chore you would like to add.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short summary of the chore.
+      placeholder: A short summary of the chore.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the chore.
+      placeholder: A detailed description of the chore.
