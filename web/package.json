@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "predev": "bun load.ts",
     "build": "astro build",
+    "prebuild": "bun load.ts",
     "preview": "astro preview",
     "astro": "astro"
   },
