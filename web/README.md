@@ -13,10 +13,10 @@
 │   └── favicon.svg
 ├── src
 │   ├── components
-│   │   └── Ideom.astro <--1単語のコンポーネント
+│   │   └── Idiom.astro <--1単語のコンポーネント
 │   ├── layouts
 │   │   └── Layout.astro
-│   └── pages
+│   ├── pages
 │   │   └── index.astro
 │   └── data
 │       └── idioms.json <--load.tsで生成される単語一覧
@@ -28,15 +28,16 @@
 
 All commands are run from the root of the project, from a terminal:
 
-| Command               | Action                                           |
-| :-------------------- | :----------------------------------------------- |
-| `bun install`         | Installs dependencies                            |
-| `bun load.ts`         | main.csv から単語一覧の Json を生成する          |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+| Command               | Action                                       |
+| :-------------------- | :------------------------------------------- |
+| `bun install`         | Installs dependencies                        |
+| `bun load.ts`         | main.csv から単語一覧の Json を生成する      |
+| `bun run dev`         | Starts local dev server at `localhost:4321`  |
+| `bun run build`       | Build your production site to `./dist/`      |
+| `bun run preview`     | Preview your build locally, before deploying |
+| `bun run test`        | Test your Astro project                      |
+| `bun run fmt`         | Format your code with Prettier               |
+| `bun astro -- --help` | Get help using the Astro CLI                 |
 
 ## `web`の開発環境の構築方法
 
@@ -55,6 +56,7 @@ WEB 版の開発環境を構築するには、以下の手順を実行してく�
    ```
 
 4. 開発サーバーを起動します。
+
    ```sh
    bun dev
    ```
@@ -64,4 +66,4 @@ WEB 版の開発環境を構築するには、以下の手順を実行してく�
 flakeの`devShell`を利用して開発環境を構築します。
 
 また、`nix-direnv`を利用できるようにしておくと便利です。
-(`nix-ditenv`が導入されている前提で、環境を用意しています。)
+(`nix-direnv`が導入されている前提で、環境を用意しています。)

@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
-import type { IdiomData } from "./src/components/Idiom";
+import fs from 'fs';
+import path from 'path';
+import type { IdiomData } from './src/components/Idiom';
 
 function getInitial(reading: string): string {
   const ch = reading.charAt(0);
@@ -19,21 +19,21 @@ function getInitial(reading: string): string {
   }
 
   // その他（数字・記号など）
-  return "#";
+  return '#';
 }
 
 function load(csvText: string): Record<string, IdiomData[]> {
-  const lines = csvText.trim().split("\n");
+  const lines = csvText.trim().split('\n');
   const [, ...rows] = lines;
 
   const idioms: IdiomData[] = rows.map((line) => {
-    const columns = line.split(",");
+    const columns = line.split(',');
 
     const name = columns[0];
     const reading = columns[1];
     const meaning = columns[2];
 
-    const examples = columns.slice(3).filter((e) => e && e.trim() !== "");
+    const examples = columns.slice(3).filter((e) => e && e.trim() !== '');
 
     const idiom: IdiomData = { name, reading, meaning };
     if (examples.length > 0) idiom.examples = examples;
@@ -42,7 +42,7 @@ function load(csvText: string): Record<string, IdiomData[]> {
   });
 
   // 50音＋アルファベット順
-  idioms.sort((a, b) => a.reading.localeCompare(b.reading, "ja"));
+  idioms.sort((a, b) => a.reading.localeCompare(b.reading, 'ja'));
 
   const grouped: Record<string, IdiomData[]> = {};
 
@@ -54,10 +54,10 @@ function load(csvText: string): Record<string, IdiomData[]> {
   return grouped;
 }
 
-const inputPath = path.resolve("../main.csv");
-const outputPath = path.resolve("./src/data/idioms.json");
-const csvText = fs.readFileSync(inputPath, "utf-8");
+const inputPath = path.resolve('../main.csv');
+const outputPath = path.resolve('./src/data/idioms.json');
+const csvText = fs.readFileSync(inputPath, 'utf-8');
 const idioms = load(csvText);
 
-fs.writeFileSync(outputPath, JSON.stringify(idioms, null, 2), "utf-8");
-console.log("idioms.json を書き出しました");
+fs.writeFileSync(outputPath, JSON.stringify(idioms, null, 2), 'utf-8');
+console.log('idioms.json を書き出しました');
