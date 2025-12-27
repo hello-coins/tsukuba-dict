@@ -1,17 +1,17 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
-import react from "@astrojs/react";
+import react from '@astrojs/react';
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  site: "https://hello-coins.github.io",
-  base: "/tsukuba-dict/",
+  site: 'https://hello-coins.github.io',
+  base: '/tsukuba-dict/',
   vite: {
     plugins: [tailwindcss()],
   },
-  output: "static",
+  output: 'static',
 });
