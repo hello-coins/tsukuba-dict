@@ -1,0 +1,23 @@
+name: Feature Request
+description: This template is a issue for requesting new features.
+title: 'Feature Request'
+
+body:
+  - type: markdown
+    id: body
+    attributes:
+      value: |
+        ## Feature Request
+        Please provide a clear and concise description of the feature you would like to add.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A short summary of the feature.
+      placeholder: A short summary of the feature.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the feature.
+      placeholder: A detailed description of the feature.
